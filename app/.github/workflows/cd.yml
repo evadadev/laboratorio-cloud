@@ -15,8 +15,8 @@ jobs:
       - name: Use SSH key
         run: |
           mkdir -p ~/.ssh/
-          echo "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/private_id
-          sudo chmod 600 ~/.ssh/private_id
+          echo "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/id_rsa
+          sudo chmod 600 ~/.ssh/id_rsa
 
       - name: Git config
         run: |
@@ -24,7 +24,7 @@ jobs:
           git config --global user.name "cd-user"
 
       - name: App
-        run: cd app
+        run: cd ./app
 
       - name: Install
         run: npm ci
