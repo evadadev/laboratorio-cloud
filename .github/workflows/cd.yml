@@ -23,9 +23,6 @@ jobs:
           git config --global user.email "cd-user@my-app.com"
           git config --global user.name "cd-user"
 
-      - name: App
-        run: cd ./app
-
       - name: Install
         run: npm ci
 
