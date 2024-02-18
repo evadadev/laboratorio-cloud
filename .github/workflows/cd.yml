@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - gh-pages-action
-
+      
 jobs:
   cd:
     runs-on: ubuntu-latest
